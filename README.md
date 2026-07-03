@@ -76,9 +76,6 @@ dmesg | tail -20
 sudo rmmod monitor
 ```
 
-## 3. Demo Screenshots
-Screenshots for all tasks are in the OS-ss folder
-
 ## 4. Engineering Analysis
 
 ### Isolation Mechanisms
