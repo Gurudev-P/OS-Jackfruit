@@ -76,7 +76,7 @@ dmesg | tail -20
 sudo rmmod monitor
 ```
 
-## 4. Engineering Analysis
+## 3. Engineering Analysis
 
 ### Isolation Mechanisms
 The runtime uses `clone()` with `CLONE_NEWPID`, `CLONE_NEWUTS`, and `CLONE_NEWNS`
@@ -159,7 +159,7 @@ The high-priority container receives proportionally more CPU time. Completion
 time for `nice=0` was 59.262s vs 59.723s for `nice=19`, reflecting that the
 low-priority container was repeatedly preempted and made slower progress.
 
-## 5. Design Decisions and Tradeoffs
+## 4. Design Decisions and Tradeoffs
 
 ### Namespace Isolation
 **Choice:** `clone()` with `CLONE_NEWPID | CLONE_NEWUTS | CLONE_NEWNS`
@@ -222,7 +222,7 @@ which is the core Linux scheduling concept relevant to this project. CPU affinit
 would force serialisation and measure queue latency rather than scheduler
 fairness.
 
-## 6. Scheduler Experiment Results
+## 5. Scheduler Experiment Results
 
 ### Experiment 1: CPU-bound vs I/O-bound
 | Container | Workload   | Observed CPU% |
